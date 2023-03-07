@@ -1,12 +1,9 @@
-
 <br>
-
 <img align="left" width="120" height="120" src="https://scout.es/wp-content/uploads/2019/09/ODS-circulo-1.png">
 <h1>Índice de consciência sustentável no Brasil</h1>
 
-[![Pyversion](https://img.shields.io/badge/3.8_|_3.9_|_3.10_|_3.11-3D7AAB?logo=python&logoColor=FFDF58&labelColor=3D54D&label=Python%20)]()
+[![Pyversion](https://img.shields.io/badge/3.11.2-3D7AAB?logo=python&logoColor=FFDF58&labelColor=3D54D&label=Python%20)]()
 [![ODS](https://img.shields.io/badge/ODS_Brasil-0D7?&labelColor=3D54D&label=ONU%20)](https://brasil.un.org/pt-br/sdgs)
-<!--- ([![powered](https://img.shields.io/badge/Valter-0FF?&labelColor=E43&label=powered+by%20)](https://brasil.un.org/pt-br/sdgs)) -->
 <br>
 
 # 
@@ -36,17 +33,16 @@ O cálculo do índice de consciência sustentável, consiste em utilizar como ba
 *(A serem apresentados)*
 
 ### Apresentação dos Indicadores
-*(A serem apresentados)*
+Os indicadores utilizados foram os próprios Objetivos de Desenvolvimento Sustentável (ODS) junto às suas métricas de como são medidos pela ONU. Sendo eles:
 
+![ODS](ods.png)
+
+A lista detalhada (em inglês) para cada ODS utilizada está em [Indicators](https://github.com/ValterNiloJr/ics-brasil/blob/master/Indicadores.md)
 
 # Desenvolvimento
 *(A ser apresentado)*
 
-
-
 # Referências
-
-<img width="900" height="500" src="https://th.bing.com/th/id/R.d4b8cf850f0b926c207f9c7e39f2b5b4?rik=TVEpA2pJxJDTNw&pid=ImgRaw&r=0">
 
 - https://brasil.un.org/pt-br/sdgs
 
@@ -60,13 +56,13 @@ O cálculo do índice de consciência sustentável, consiste em utilizar como ba
 ### Filtro:
 
 ### Data Series 
-    Todos os 17 ODS | (Selected 625 of 625)
+> Todos os 17 ODS | (Selected 625 of 625)
 
 ### Geographic Areas | Countries
-    Todos os Países | (346 of 346)
+> Todos os Países | (346 of 346)
 
 ### Period | Years
-    2000 - 2022
+> 2000 - 2022
 
 ### Link: https://unstats.un.org/sdgs/dataportal/database
 
@@ -74,3 +70,9 @@ O cálculo do índice de consciência sustentável, consiste em utilizar como ba
 
 # Autor
 Valter Nilo Alcantara de Oliveira Junior
+
+# 
+> [Voltar ao topo](#apresentação)
+
+
+
