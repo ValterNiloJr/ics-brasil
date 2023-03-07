@@ -37,7 +37,7 @@ Os indicadores utilizados foram os próprios Objetivos de Desenvolvimento Susten
 
 ![ODS](ods.png)
 
-A lista detalhada (em inglês) para cada ODS utilizada está em [Indicators](https://github.com/ValterNiloJr/ics-brasil/blob/master/Indicadores.md)
+A lista detalhada (em inglês) para cada ODS utilizada está em [Indicators](https://github.com/ValterNiloJr/ics-brasil/blob/master/Indicators.md)
 
 # Desenvolvimento
 *(A ser apresentado)*
