@@ -77,7 +77,8 @@ class Database:
                 if corr != None:
                     corr_aux = [x for i, x in enumerate(corr) if x in filtered_df.columns]
                     if corr_aux != []:
-                        # group the DataFrame by combinations of values in the correlation columns and count the number of rows in each group
+                        # group the DataFrame by combinations of values in the correlation columns 
+                        #   and count the number of rows in each group
                         group = filtered_df.groupby(corr_aux).size()
                         # get the group key with the highest row count
                         greatest_combination = group.idxmax()
@@ -98,51 +99,91 @@ class Database:
         return relevant
 
     # --> Get DB metadata
-    def get_metadata(self, db:dict, relevants) -> dict:
-        meta = []
+    def get_metadata(self, db:dict, relevants, values:str, date:str, remove_na=True) -> dict:
+        meta = {}
         for data in db:
-            meta.append(self.get_df_metadata(db[data], relevants[data]))
+            meta.update(self.get_df_metadata(data, db[data], relevants[data], values, date, remove_na))
+        
+        return meta
 
     # --> Get DF metadata
-    def get_df_metadata(self, data:pd.DataFrame, relevants:dict) -> list:
-        df = data.copy()
-
-        print(relevants)
+    def get_df_metadata(self, name:str, data:pd.DataFrame, relevants:dict, values:str, date:str, remove_na=True) -> dict:
+        meta = {}
+        params = {}
         for relevant in relevants:
-            filtered_df = self.filter_data(df, **relevant)
-            print(filtered_df)
-            plt.plot(filtered_df['TimePeriod'], filtered_df['Value'], '-o')
-            plt.xticks(filtered_df['TimePeriod'])
+            filtered_relevant_df = self.filter_data(data, **relevant)
+            if values in list(filtered_relevant_df.columns):
+                # Get Trend of values
+                if self.is_increasing(filtered_relevant_df[values]):
+                    df_trend = {'trend': 'increasing'}
+                elif self.is_decreasing(filtered_relevant_df[values]):
+                    df_trend = {'trend': 'decreasing'}
+                else:
+                    df_trend = {'trend': 'not clear'}
+
+                # Get Value of Trend
+                first_value = float(filtered_relevant_df[values].iloc[0])
+                last_value = float(filtered_relevant_df[values].iloc[-1])
+
+                percentage_value = (last_value - first_value) / first_value * 100
+
+                df_value = {'value': f'{abs(percentage_value):.2f}%'}
+
+                # Get Period
+                begin_date = filtered_relevant_df[date].iloc[0]
+                end_date = filtered_relevant_df[date].iloc[-1]
+
+                df_period = {'period': f'{begin_date} - {end_date}'}
+
+                params.update({relevant['SeriesDescription']: {**df_trend, **df_value, **df_period}})
+                
+        if not (remove_na == True and params == {}):
+            meta.update({name: params})
+
+        return meta
+
+            # Send to branch feature Graphics
+            #plt.plot(filtered_df['TimePeriod'], filtered_df['Value'], '-o')
+            #plt.xticks(filtered_df['TimePeriod'])
             #plt.yticks(range(0,30))
-            plt.title(relevant['SeriesDescription'])
-            plt.show()
+            #plt.title(relevant['SeriesDescription'])
+            #plt.show()
+
+    # --> Calculate trand: if values is increasing
+    def is_increasing(self, set_values:pd.Series) -> bool:
+        moving_average = set_values.rolling(window=1).mean()
+        return moving_average.iloc[-1] > moving_average.iloc[0]
+
+    # --> Calculate trand: if values is decreasing
+    def is_decreasing(self, set_values:pd.Series) -> bool:
+        moving_average = set_values.rolling(window=1).mean()
+        return moving_average.iloc[-1] < moving_average.iloc[0]
 
     # --> Calculate Sustainable Awareness Index (SAI)
-    def calculate_SAI(self, metadata):
-        pass
-    
-#    def get_all(self) -> dict:
-#        return self.db
-#
-#    def get_data(self, key:str) -> pd.DataFrame:
-#        try:
-#            return self.db[key]
-#        except KeyError:
-#            raise KeyError(f'Key not found. Try: {list(self.db.keys())}')
+    #def calculate_SAI(self, metadata):
+    #    pass
 
 
 if __name__ == '__main__':
     # Define a relative path (current code)
     RELATIVE_PATH = os.path.dirname(os.path.abspath(__file__))
     DATABASE_PATH = os.path.abspath(os.path.join(RELATIVE_PATH, '../../datasets/brazil'))
+    
     columns = ['Goal', 'Indicator', 'SeriesCode', 'SeriesDescription',
              'GeoAreaName', 'TimePeriod', 'Value', 'Sex', 'Location', 'Units', 'Age']
-    db = Database()
-    data = db.read_db(path=DATABASE_PATH)
-    filtered = db.filter_db(data, by_columns=columns, GeoAreaName='Brazil')
-    relevant = db.filter_relevant(filtered, metric='SeriesDescription', corr=['Sex', 'Location', 'Age'])
-    metadata = db.get_df_metadata(filtered['Goal01'], relevant['Goal01'])
     
+    # New Database Instance
+    db = Database()
+    # get df of all data (DB)
+    all_data = db.read_db(path=DATABASE_PATH)
+    # get df filtering all data with columns and gruoup (country = Brazil)
+    filtered = db.filter_db(all_data, by_columns=columns, GeoAreaName='Brazil')
+    # get dict params with relevant data for analysis 
+    relevant = db.filter_relevant(filtered, metric='SeriesDescription', corr=['Sex', 'Location', 'Age'])
+    # get dict metada with (trends, value, period)
+    metadata = db.get_metadata(filtered, relevant, values='Value', date='TimePeriod')
+    print(metadata)
+
     #print(db.read_file(DATABASE_PATH + '/Goal01.xlsx'))
     #print(new_db.get_all())
     #print(new_db.get_data('Goal03'))
