@@ -89,7 +89,7 @@ class SDG(Classifier):
         return self.metadata, references
     
     # --> Calculate Sustainable Awareness Index (SAI)
-    def calculate_SAI(self, classification) -> str:
+    def calculate_SAI(self, classification) -> float:
         sai = 0
         n_sdg = 17
         n_indicators = len(classification.keys())
@@ -99,10 +99,10 @@ class SDG(Classifier):
         # SAI calculation
         for key in classification:
             for params in classification[key].values():
-                if params['trend_classification'] == 'Y':
+                if params['trend_classification'] == 'Y' and str(params['value_normalized']) != 'nan':
                     sai += ((params['value_normalized'] / weights[key]))
 
-                elif params['trend_classification'] == 'N':
+                elif params['trend_classification'] == 'N' and str(params['value_normalized']) != 'nan':
                     sai -= ((params['value_normalized'] / weights[key]))
         
         # for all SDG
