@@ -55,6 +55,37 @@ class SDG(Classifier):
             references.update({key : {**params}})
             params = {}
 
+        # Normilize metadata
+        values = []
+        values_normalized = []
+        for data in self.metadata.values():
+            for params in data.values():
+                values.append(params['value'])
+            if len(values) > 1:
+                arr = np.array(values)
+                
+                mean = np.mean(arr)
+                
+                std = np.std(arr)
+
+                # normalize with Z-score in array
+                arr_normalized = (arr - mean) / std
+            else:
+                arr_normalized = [0]
+            values_normalized.append(arr_normalized)
+
+            values = []
+
+        i = 0
+        j = 0
+
+        for data in self.metadata:
+            for params in self.metadata[data]:
+                self.metadata[data][params].update({'value_normalized':values_normalized[i][j]})
+                j += 1
+            i += 1
+            j = 0
+
         return self.metadata, references
     
     # --> Calculate Sustainable Awareness Index (SAI)
@@ -69,9 +100,13 @@ class SDG(Classifier):
         for key in classification:
             for params in classification[key].values():
                 if params['trend_classification'] == 'Y':
-                    sai += ((params['value'] / weights[key]) / n_indicators)
+                    sai += ((params['value_normalized'] / weights[key]))
 
                 elif params['trend_classification'] == 'N':
-                    sai -= ((params['value'] / weights[key]) / n_indicators)
-
-        return sai 
+                    sai -= ((params['value_normalized'] / weights[key]))
+        
+        # for all SDG
+        sai = (sai * n_indicators) / n_sdg
+        
+        # return percentage
+        return sai * 100
