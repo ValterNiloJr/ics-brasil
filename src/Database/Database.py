@@ -127,7 +127,7 @@ class Database:
 
                 percentage_value = (last_value - first_value) / first_value * 100
 
-                df_value = {'value': float(f'{abs(percentage_value):.2f}'), 'unit':'percent'}
+                df_value = {'value': f'{abs(percentage_value):.2f}%'}
 
                 # Get Period
                 begin_date = filtered_relevant_df[date].iloc[0]
