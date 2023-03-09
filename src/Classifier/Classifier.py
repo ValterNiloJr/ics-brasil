@@ -55,9 +55,6 @@ class SDG(Classifier):
             references.update({key : {**params}})
             params = {}
 
-        # Normilize metadata
-        
-
         return self.metadata, references
     
     # --> Calculate Sustainable Awareness Index (SAI)
@@ -72,9 +69,9 @@ class SDG(Classifier):
         for key in classification:
             for params in classification[key].values():
                 if params['trend_classification'] == 'Y':
-                    sai += ((float(params['value'][:-1]) / weights[key]) / n_indicators)
+                    sai += ((params['value'] / weights[key]) / n_indicators)
 
                 elif params['trend_classification'] == 'N':
-                    sai -= ((float(params['value'][:-1]) / weights[key]) / n_indicators)
+                    sai -= ((params['value'] / weights[key]) / n_indicators)
 
         return sai 
