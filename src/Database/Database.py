@@ -142,13 +142,6 @@ class Database:
 
         return meta
 
-            # Send to branch feature Graphics
-            #plt.plot(filtered_df['TimePeriod'], filtered_df['Value'], '-o')
-            #plt.xticks(filtered_df['TimePeriod'])
-            #plt.yticks(range(0,30))
-            #plt.title(relevant['SeriesDescription'])
-            #plt.show()
-
     # --> Calculate trand: if values is increasing
     def is_increasing(self, set_values:pd.Series) -> bool:
         moving_average = set_values.rolling(window=1).mean()
