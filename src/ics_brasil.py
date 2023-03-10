@@ -33,3 +33,5 @@ classification = sdg.classifier_by_trend(metadata=metadata_normilized, reference
 sustainable_awareness_index = sdg.calculate_SAI(classification=classification)
 
 print(f'The Sustainable Awareness Index (SAI) for {country} is: {sustainable_awareness_index:.2f}%')
+
+Graphics(database=filtered, relevants=relevant, country=country, type='-o', color='r').plot()

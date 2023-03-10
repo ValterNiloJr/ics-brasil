@@ -7,9 +7,10 @@ RELATIVE_PATH = os.path.dirname(os.path.abspath(__file__))
 SAVE_FIG_PATH = os.path.abspath(os.path.join(RELATIVE_PATH, '../Assets/Graphs'))
 
 class Graphics:
-    def __init__(self, database:dict, relevants:dict, type=None, color='k') -> None:
+    def __init__(self, database:dict, relevants:dict, country:str, type=None, color='k') -> None:
         self.database = database
         self.relevants = relevants
+        self.country = country
         self.type = type
         self.color = color
     
@@ -24,6 +25,7 @@ class Graphics:
                     plt.xticks(data_df['TimePeriod'])
                     plt.xlabel('Time')
                     plt.ylabel('Value')
+                    plt.legend([self.country])
                     title = data_df['SeriesDescription'].iloc[0]
                     plt.title(title)
                     title = title.replace('/','-')
