@@ -33,11 +33,11 @@ O cálculo do índice de consciência sustentável, consiste em utilizar como ba
 
 A medida fundamentada a partir de um somatório ponderado nos indicadores dos ODS.
 
-<img width="500" height="110" src=ics.png>
+<img width="500" height="110" src=src/Assets/Images/ics.png>
 
 Onde:
 
-<img width="500" height="350" src=legend.png>
+<img width="500" height="350" src=src/Assets/Images/legend.png>
 
 **ics** dado em (%)
 
@@ -50,27 +50,27 @@ Resultando um conjunto normalizado com média 0 com desvio padrão de 1.
 ### Apresentação dos Indicadores
 Os indicadores utilizados foram os próprios Objetivos de Desenvolvimento Sustentável (ODS) junto às suas métricas de como são medidos pela ONU. Sendo eles:
 
-![ODS](ods.png)
+![ODS](src/Assets/Images/ods.png)
 
-A lista detalhada (em inglês) para cada ODS utilizada está em [Indicators](https://github.com/ValterNiloJr/ics-brasil/blob/master/Indicadores.md)
+A lista detalhada (em inglês) para cada ODS utilizada está em [Indicators](https://github.com/ValterNiloJr/ics-brasil/blob/master/Indicators.md)
 
 # Desenvolvimento
 
 A estrutura criada foi dividida em 4 (quatro) partes: 3 (três) classes e 1 (um) gerenciador.
 
-O [Database]() é responsável por toda a leitura e tratamento estrutural dos dados, tais como filtros por grupos específicos, remoção de dados faltantes e obtenção dos metadados que serão utilizados nos demais módulos.
+O [Database](https://github.com/ValterNiloJr/ics-brasil/blob/master/src/Database/Database.py) é responsável por toda a leitura e tratamento estrutural dos dados, tais como filtros por grupos específicos, remoção de dados faltantes e obtenção dos metadados que serão utilizados nos demais módulos.
 
-O [Classifier]() é uma representação de um classificador, que pode ser implementado por meio da estruturação de um crawler para buscar os dados relevantes ou mesmo a implementação de algoritmos de **machine learning** e **redes neurais** para classificar os dados da melhor forma possível. No entanto, para fins de didáticos, foi utilizado uma classificação simples feita a partir de uma análise orgânica.
+O [Classifier](https://github.com/ValterNiloJr/ics-brasil/blob/master/src/Classifier/Classifier.py) é uma representação de um classificador, que pode ser implementado por meio da estruturação de um crawler para buscar os dados relevantes ou mesmo a implementação de algoritmos de **machine learning** e **redes neurais** para classificar os dados da melhor forma possível. No entanto, para fins de didáticos, foi utilizado uma classificação simples feita a partir de uma análise orgânica.
 
-A [Graphics]() lida com a parte de exibição dos dados por meios gráficos. No entanto, ela não recebeu a devida atenção até o momento, tento em vista que a maior parte da visualização dos dados analisados estão disponíveis no site da ONU apresentado nas [referências](#visualização-dos-indicadores).
+A [Graphics](https://github.com/ValterNiloJr/ics-brasil/blob/master/src/Graphics/Graphics.py) lida com a parte de exibição dos dados por meios gráficos. No entanto, ela não recebeu a devida atenção até o momento, tento em vista que a maior parte da visualização dos dados analisados estão disponíveis no site da ONU apresentado nas [referências](#visualização-dos-indicadores).
 
-Por fim, o [Gerenciador]() permite a apresentação, de forma simplificada, de toda a metodologia utilizada em cada etapa do processo até chegar no valor final do ICS.
+Por fim, o [Gerenciador](https://github.com/ValterNiloJr/ics-brasil/blob/master/src/ics_brasil.py) permite a apresentação, de forma simplificada, de toda a metodologia utilizada em cada etapa do processo até chegar no valor final do ICS.
 
 # Conclusões
 
 Como o objetivo da análise é retornar uma métrica que diz respeito a consciência sustentável de uma determinada região, os dados foram filtrados fazendo uma correlação entre parâmetros relacionados, como: Sexo, Idade e Localização. Definindo um conjunto de dados mais próximo do que se deseja medir.
 
-Portanto, após todas as etapas definidas na metodologia, chegou-se à um valor de ICS para o Brasil de **24.16%**. Mesmo conciderando uma análise razoável dos dados disponibilizados pela ONU o resultado ainda assim, é preocupante. Para contextualizar melhor o cenário que o Brasil se encontra no âmbito **Sustentabilidade** foi apresentado um [*Storytelling*]() trazendo outros dados relevantes e a disposição de pessoas para solucionar um problema latente: **a vida no planeta**.
+Portanto, após todas as etapas definidas na metodologia, chegou-se à um valor de ICS para o Brasil de **24.16%**. Mesmo considerando uma análise razoável dos dados disponibilizados pela ONU o resultado ainda assim, é preocupante. Para contextualizar melhor o cenário que o Brasil se encontra no âmbito **Sustentabilidade** foi apresentado um [*Storytelling*]() trazendo outros dados relevantes e a disposição de pessoas para solucionar um problema latente: **a vida no planeta**.
 
 # Referências
 
