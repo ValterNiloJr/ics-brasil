@@ -70,7 +70,7 @@ Por fim, o [Gerenciador](https://github.com/ValterNiloJr/ics-brasil/blob/master/
 
 Como o objetivo da análise é retornar uma métrica que diz respeito a consciência sustentável de uma determinada região, os dados foram filtrados fazendo uma correlação entre parâmetros relacionados, como: Sexo, Idade e Localização. Definindo um conjunto de dados mais próximo do que se deseja medir.
 
-Portanto, após todas as etapas definidas na metodologia, chegou-se à um valor de ICS para o Brasil de **24.16%**. Mesmo considerando uma análise razoável dos dados disponibilizados pela ONU o resultado ainda assim, é preocupante. Para contextualizar melhor o cenário que o Brasil se encontra no âmbito **Sustentabilidade** foi apresentado um [*Storytelling*]() trazendo outros dados relevantes e a disposição de pessoas para solucionar um problema latente: **a vida no planeta**.
+Portanto, após todas as etapas definidas na metodologia, chegou-se à um valor de ICS para o Brasil de **24.16%**. Mesmo considerando uma análise razoável dos dados disponibilizados pela ONU o resultado ainda assim, é preocupante. Para contextualizar melhor o cenário que o Brasil se encontra no âmbito **Sustentabilidade** foi apresentado um [*Storytelling*](https://github.com/ValterNiloJr/ics-brasil/blob/master/O%20caminho%20para%20a%20Sustentabilidade.pdf) trazendo outros dados relevantes e a disposição de pessoas para solucionar um problema latente: **a vida no planeta**.
 
 # Referências
 
