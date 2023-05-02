@@ -1,6 +1,44 @@
-# Sustainable Development Goals - Indicators 
+# Sustainable Development Goals - Indicators
+
+## Summary
+> [Goal 01](#goal-01)
+
+> [Goal 02](#goal-02)
+
+> [Goal 03](#goal-03)
+
+> [Goal 04](#goal-04)
+
+> [Goal 05](#goal-05)
+
+> [Goal 06](#goal-06)
+
+> [Goal 07](#goal-07)
+
+> [Goal 08](#goal-08)
+
+> [Goal 09](#goal-09)
+
+> [Goal 10](#goal-10)
+
+> [Goal 11](#goal-11)
+
+> [Goal 12](#goal-12)
+
+> [Goal 13](#goal-13)
+
+> [Goal 14](#goal-14)
+
+> [Goal 15](#goal-15)
+
+> [Goal 16](#goal-16)
+
+> [Goal 17](#goal-17)
+
+#
 
 ## Goal 01
+> [Summary](#summary)
 - Proportion of population below international poverty line (%)
 - Employed population below international poverty line, by sex and age (%)
 - [ILO] Proportion of population covered by at least one social protection benefit, by sex (%)
@@ -38,7 +76,8 @@
 - Proportion of total government spending on essential services, education (%)
 
 #
-## Goal02
+## Goal 02
+> [Summary](#summary)
 - Prevalence of undernourishment (%)
 - Number of undernourished people (millions)
 - Prevalence of moderate or severe food insecurity (%)
@@ -71,7 +110,8 @@
 - Indicator of Food Price Anomalies (IFPA), by type of product
 
 #
-## Goal03 
+## Goal 03 
+> [Summary](#summary)
 - Maternal mortality ratio
 - Proportion of births attended by skilled health personnel (%)
 - Infant mortality rate (deaths per 1,000 live births)
@@ -116,7 +156,8 @@
 - Percentage of bloodstream infection due to methicillin-resistant Staphylococcus aureus (MRSA) among patients seeking care and whose blood sample is taken and tested (%)
 
 #
-## Goal04 
+## Goal 04 
+> [Summary](#summary)
 - Proportion of children and young people achieving a minimum proficiency level in reading and mathematics (%)
 - Completion rate, by sex, location, wealth quintile and education level (%)
 - Participation rate in organized learning (one year before the official primary entry age), by sex (%)
@@ -143,7 +184,8 @@
 - Total official flows for scholarships, by recipient countries (millions of constant 2020 United States dollars)
 
 #
-## Goal05 
+## Goal 05 
+> [Summary](#summary)
 - Legal frameworks that promote, enforce and monitor gender equality (percentage of achievement, 0 - 100) -- Area 3: employment and economic benefits     
 - Legal frameworks that promote, enforce and monitor gender equality (percentage of achievement, 0 - 100) -- Area 1: overarching legal frameworks and public life
 - Legal frameworks that promote, enforce and monitor gender equality (percentage of achievement, 0 - 100) -- Area 4: marriage and family
@@ -185,7 +227,8 @@
 - "Proportion of countries with systems to track and make public allocations for gender equality and womens empowerment (%)"
 
 #
-## Goal06 
+## Goal 06 
+> [Summary](#summary)
 - Proportion of population using safely managed drinking water services, by urban/rural (%)
 - Proportion of population practicing open defecation, by urban/rural (%)
 - Proportion of population using safely managed sanitation services, by urban/rural (%)
@@ -233,7 +276,8 @@
 - Countries with procedures in law or policy for participation by service users/communities in planning program in water resources planning and management, by level of definition in procedures (10 = Clearly defined; 5 = Not clearly defined ; 0 = NA)
 
 #
-## Goal07 
+## Goal 07 
+> [Summary](#summary)
 - Proportion of population with access to electricity, by urban/rural (%)
 - Proportion of population with primary reliance on clean fuels and technology (%)
 - Renewable energy share in the total final energy consumption (%)
@@ -242,7 +286,8 @@
 - Installed renewable\xa0electricity-generating capacity (watts per capita)
 
 #
-## Goal08 
+## Goal 08 
+> [Summary](#summary)
 - Annual growth rate of real GDP per capita (%)
 - Number of automated teller machines (ATMs) per 100,000 adults
 - Number of commercial bank branches per 100,000 adults
@@ -266,7 +311,8 @@
 - Existence of a developed and operationalized national strategy for youth employment, as a distinct strategy or as part of a national employment strategy
      
 #
-## Goal09 
+## Goal 09 
+> [Summary](#summary)
 - Freight volume, by mode of transport (tonne kilometres)
 - Passenger volume (passenger kilometres), by mode of transport
 - Container port traffic, maritime transport (twenty-foot equivalent units - TEUs)
@@ -288,7 +334,8 @@
 - Proportion of population covered by at least a 4G mobile network (%)
 
 #
-## Goal10 
+## Goal 10 
+> [Summary](#summary)
 - Growth rates of household expenditure or income per capita (%)
 - Proportion of people living below 50 percent of median income (%)
 - Labour share of GDP (%) Non-performing loans to total gross loans (%)
@@ -310,7 +357,8 @@
 - Average remittance costs of sending $200 for a sending country as a proportion of the amount remitted (%)
 
 #
-## Goal11 
+## Goal 11 
+> [Summary](#summary)
 - Proportion of urban population living in slums (%)
 - Proportion of population that has convenient access to public transport (%)
 - Total expenditure per capita spent on cultural and natural heritage, public (PPP, constant 2017 United States dollars)
@@ -343,7 +391,8 @@
 - Countries that have national urban policies or regional development plans that respond to population dynamics; ensure balanced territorial development; and increase local fiscal space (1 = YES; 0 = NO)
 
 #
-## Goal12 
+## Goal 12 
+> [Summary](#summary)
 - Countries with sustainable consumption and production (SCP) national action plans or SCP mainstreamed as a priority or target into national policies (1 = YES; 0 = NO)
 - Countries with policy instrument for sustainable consumption and production (1 = YES; 0 = NO)
 - Number of policies, instruments and mechanism in place for sustainable consumption and production (Number)
@@ -373,7 +422,8 @@
 - Fossil-fuel subsidies (consumption and production) per capita (nominal United States dollars)
 
 #
-## Goal13 
+## Goal 13 
+> [Summary](#summary)
 - Number of people affected by disaster (number)
 - Number of directly affected persons attributed to disasters per 100,000 population (number)
 - Number of injured or ill people attributed to disasters (number)
@@ -391,7 +441,8 @@
 - Extent to which global citizenship education and education for sustainable development are mainstreamed in teacher education
 
 #
-## Goal14 
+## Goal 14 
+> [Summary](#summary)
 - Beach litter originating from national land-based sources that ends in the beach (%)
 - Beach litter originating from national land-based sources that ends in the beach (Tonnes)
 - Exported beach litter originating from national land-based sources (Tonnes)
@@ -412,7 +463,8 @@
 lowest to 5 highest)
  
 #
-## Goal15 
+## Goal 15 
+> [Summary](#summary)
 - Forest area as a proportion of total land area (%)
 - Forest area (thousands of hectares) Land area (thousands of hectares)
 - Average proportion of Freshwater Key Biodiversity Areas (KBAs) covered by protected areas (%)
@@ -439,7 +491,8 @@ lowest to 5 highest)
 - Total official development assistance for biodiversity, by recipient countries (millions of constant 2020 United States dollars)
 
 #
-## Goal16 
+## Goal 16 
+> [Summary](#summary)
 - Number of victims of intentional homicide per 100,000 population, by sex (victims per 100,000 population)
 - Number of victims of intentional homicide, by sex (number)
 - Countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information
@@ -468,7 +521,8 @@ lowest to 5 highest)
 - Countries with no application for accreditation with the Paris Principles, D status  (1 = YES; 0 = NO)
 
 #
-## Goal17 
+## Goal 17 
+> [Summary](#summary)
 - Total government revenue (budgetary central government) as a proportion of GDP (%)
 - Total government revenue, in local currency
 - Proportion of domestic budget funded by domestic taxes (% of GDP)
@@ -516,3 +570,5 @@ lowest to 5 highest)
 - Amount of tracked imported Environmentally Sound Technologies (current United States dollars)
 - Internet users per 100 inhabitants
 - Total official development assistance (gross disbursement) for technical cooperation (millions of 2020 United States dollars)
+
+> [Top](#sustainable-development-goals---indicators)
